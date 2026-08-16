@@ -41,7 +41,7 @@ def calculate_score(row):
     
     # Title/Role (+50 / -50)
     title = str(row.get('title', '')).lower()
-    high_titles = ['vp', 'head of', 'founder', 'ceo', 'managing partner', 'coo', 'owner', 'director']
+    high_titles = ['vp', 'head of', 'founder', 'ceo', 'managing partner', 'coo', 'owner', 'director', 'cto']
     low_titles = ['student', 'intern', 'freelancer', 'developer']
     
     if any(t in title for t in high_titles):
