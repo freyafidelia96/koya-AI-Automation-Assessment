@@ -7,7 +7,7 @@ import numpy as np
 def clean_budget(b):
     """Parses messy string budgets into clean float values."""
     if pd.isna(b): return np.nan
-    b = str(b).lower().replace('$', '').replace(',', '').replace('/mo', '').replace('~', '').strip()
+    b = str(b).lower().replace('$', '').replace(',', '').replace('/mo', '').replace('+', '').replace('~', '').strip()
     if b in ['tbd', 'budget', 'asdf', 'depends', 'nan', '']: return np.nan
     
     if '-' in b: 
