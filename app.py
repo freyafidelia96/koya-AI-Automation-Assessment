@@ -23,7 +23,7 @@ def clean_budget(b):
 def clean_employees(e):
     """Parses messy string employee counts into clean floats."""
     if pd.isna(e): return np.nan
-    e = str(e).lower().replace(',', '').replace('+', '').strip()
+    e = str(e).lower().replace(',', '').replace('+', '').replace('~', '').strip()
     
     if '-' in e:
         parts = e.split('-')
